@@ -1,64 +1,62 @@
-# RW GARAGE — Catálogo Digital de Produtos Automotivos 🚗✨
+# 🚗 RW Garage — Catálogo Digital de Estética Automotiva
 
-Catálogo online desenvolvido para a **RW GARAGE**, uma loja especializada em produtos de estética automotiva.  
-O projeto tem como objetivo apresentar os produtos de forma organizada, visual e acessível, direcionando o cliente final para os canais oficiais de compra.
+Catálogo online de produtos para estética automotiva da **RW Garage**, desenvolvido para facilitar a visualização dos produtos e direcionar clientes para compra via **Mercado Livre** e **Shopify**.
 
----
-
-## 🔗 Aplicação Online (LIVE)
-
-👉 https://rw-garage-catalog.onrender.com  
-
+Este projeto também faz parte do meu **portfólio pessoal**, demonstrando habilidades em Python, Streamlit, organização de dados e construção de aplicações web.
 
 ---
 
-## 📌 Objetivo do Projeto
+## 🎯 Objetivo do Projeto
 
-- Criar um **catálogo digital online**, com visual de site
-- Exibir produtos com:
-  - Imagem
-  - Descrição
-  - Preço
-- Direcionar a compra para:
-  - Mercado Livre
-  - Shopify
-- Facilitar a manutenção e atualização do catálogo
-- Servir como **projeto de portfólio**, simulando um cenário real de cliente
+Criar um **catálogo digital moderno**, simples e responsivo que:
+
+- Organize os produtos por categoria
+- Apresente imagens, descrição e preços
+- Disponibilize links diretos para compra
+- Funcione como um site público da RW Garage
+- Possa ser facilmente mantido e expandido
 
 ---
 
-## 🧠 Solução Proposta
+## 🧠 Solução Desenvolvida
 
-A aplicação foi desenvolvida utilizando **Python + Streamlit**, permitindo:
+A aplicação foi construída utilizando:
 
-- Desenvolvimento rápido
-- Interface limpa e responsiva
-- Fácil hospedagem
-- Atualização dos produtos via arquivo `.csv`, sem necessidade de alterar o código
+- **Python** para manipulação de dados
+- **Pandas** para organização do catálogo
+- **Streamlit** para criação da interface web
+- **HTML + CSS** para estilização customizada
+- Estrutura modular para facilitar manutenção e evolução
 
----
-
-## 🛠️ Tecnologias Utilizadas
-
-- Python 3
-- Streamlit
-- Pandas
-- Pillow
-- HTML/CSS (customização visual)
+Os produtos são carregados a partir de um arquivo CSV, permitindo atualização rápida sem necessidade de alterar o código.
 
 ---
 
-## 📁 Estrutura do Projeto
+## 🖥️ Demonstração
+
+🔗 **Aplicação online (em breve):**  
+> *(Link será adicionado após o deploy)*
+
+---
+
+## 📂 Estrutura do Projeto
 
 ```text
 rw-garage-catalog/
 │
-├── app.py                # Aplicação principal
-├── data/
-│   └── produtos.csv      # Base de dados dos produtos
-├── img/
-│   └── produtos/         # Imagens dos produtos
+├── app/
+│   └── app.py                # Aplicação Streamlit
+│
 ├── assets/
-│   └── style.css         # Estilos personalizados
-├── requirements.txt
+│   └── produtos/             # Imagens dos produtos
+│
+├── data/
+│   └── catalogo_rw_garage.csv # Base de dados do catálogo
+│
+├── notebooks/
+│   └── 01_catalog_structure.ipynb # Exploração e estruturação dos dados
+│
+├── venv/                     # Ambiente virtual (ignorado no Git)
+│
+├── .gitignore
 └── README.md
