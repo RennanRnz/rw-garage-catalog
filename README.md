@@ -1,62 +1,63 @@
-# 🚗 RW Garage — Catálogo Digital de Estética Automotiva
+# 🚗 RW Garage – Catálogo Online de Estética Automotiva
 
-Catálogo online de produtos para estética automotiva da **RW Garage**, desenvolvido para facilitar a visualização dos produtos e direcionar clientes para compra via **Mercado Livre** e **Shopify**.
+Catálogo online de produtos para **estética automotiva**, desenvolvido para a **RW Garage**, com foco em apresentação visual, organização por categorias e acesso rápido aos links de compra (Mercado Livre e Shopify).
 
-Este projeto também faz parte do meu **portfólio pessoal**, demonstrando habilidades em Python, Streamlit, organização de dados e construção de aplicações web.
-
----
-
-## 🎯 Objetivo do Projeto
-
-Criar um **catálogo digital moderno**, simples e responsivo que:
-
-- Organize os produtos por categoria
-- Apresente imagens, descrição e preços
-- Disponibilize links diretos para compra
-- Funcione como um site público da RW Garage
-- Possa ser facilmente mantido e expandido
+O projeto foi desenvolvido como **portfólio** e também como uma **solução real** para um negócio local, utilizando **Python + Streamlit**.
 
 ---
 
-## 🧠 Solução Desenvolvida
+## 📌 Objetivo do Projeto
 
-A aplicação foi construída utilizando:
+Criar um catálogo online moderno e funcional que permita:
 
-- **Python** para manipulação de dados
-- **Pandas** para organização do catálogo
-- **Streamlit** para criação da interface web
-- **HTML + CSS** para estilização customizada
-- Estrutura modular para facilitar manutenção e evolução
-
-Os produtos são carregados a partir de um arquivo CSV, permitindo atualização rápida sem necessidade de alterar o código.
+- Exibir produtos de estética automotiva de forma organizada
+- Separar produtos por categorias (Lavagem, Proteção, Limpeza, etc.)
+- Exibir imagens, descrições e preços
+- Redirecionar o cliente para compra via **Mercado Livre** ou **Shopify**
+- Servir como base para um **site público da RW Garage**
 
 ---
 
-## 🖥️ Demonstração
+## 🛠️ Tecnologias Utilizadas
 
-🔗 **Aplicação online (em breve):**  
-> *(Link será adicionado após o deploy)*
+- **Python 3**
+- **Streamlit** (front-end web)
+- **Pandas** (tratamento dos dados)
+- **Jupyter Notebook** (estruturação inicial do catálogo)
+- **Git & GitHub** (versionamento)
+- **CSV** (base de dados dos produtos)
 
 ---
 
-## 📂 Estrutura do Projeto
+## 🖼️ Funcionalidades Atuais
 
-```text
-rw-garage-catalog/
-│
-├── app/
-│   └── app.py                # Aplicação Streamlit
-│
-├── assets/
-│   └── produtos/             # Imagens dos produtos
-│
-├── data/
-│   └── catalogo_rw_garage.csv # Base de dados do catálogo
-│
-├── notebooks/
-│   └── 01_catalog_structure.ipynb # Exploração e estruturação dos dados
-│
-├── venv/                     # Ambiente virtual (ignorado no Git)
-│
-├── .gitignore
-└── README.md
+- 📦 Catálogo de produtos por categoria  
+- 🖼️ Exibição de imagens dos produtos  
+- 💰 Exibição de preços  
+- 🛒 Botões de compra (Mercado Livre / Shopify)  
+- 🎨 Layout em cards com visual limpo e moderno  
+
+---
+
+## 🚀 Próximas Etapas
+
+- Deploy público (Streamlit Cloud / Render)  
+- Versão *mobile-first*  
+- Filtros avançados (preço / categoria)  
+- Domínio personalizado para a **RW Garage**  
+- Área administrativa para edição do catálogo  
+
+---
+
+## 👨‍💻 Autor
+
+**Desenvolvido por Rennan Silva**  
+Projeto criado para portfólio e aplicação real em negócio local.
+
+🔗 GitHub: [https://github.com/RennanRnz](https://github.com/RennanRnz)
+
+---
+
+## 📄 Licença
+
+Este projeto é de uso livre para fins educacionais e demonstração de portfólio.
