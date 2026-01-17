@@ -1,0 +1,11 @@
+id,categoria,produto,descricao,preco,link_mercado_livre,link_shopify,imagem
+1,Lavagem,Lava Auto Hydrox Wash Vonixx,"Shampoo automotivo neutro, fórmula segura para pintura, boa lubrificação e remoção de sujeira leve.",19.9,,,hydrox_wash.jpg
+2,Lavagem,Desincrustante Lava Autos V-Mol Vonixx,"Desincrustante automotivo concentrado. Remove sujeira pesada, óleo e detritos.",29.9,,,v_mol_desincrustante.jpg
+3,Lavagem,Limpador de Rodas e Motores Vexus Vonixx,Limpador para rodas e partes do motor. Ajuda a dissolver sujeira pesada e acumulada.,24.9,,,vexus.jpg
+4,Lavagem,V-Mol Vonixx,Shampoo automotivo concentrado com excelente rendimento e poder de limpeza.,36.0,,,v_mol_shampoo.jpg
+5,Proteção e Acabamento,Cera Blend Black Spray Vonixx,"Cera spray com carnaúba e sílica. Fácil aplicação, alto brilho e proteção leve da pintura.",49.9,,,blend_black_spray.jpg
+6,Limpeza de Superfícies,Prizm Vonixx,"Limpador ácido para remoção de sujeira ferrosa e decontaminação, como chuva ácida.",39.9,,,prizm.jpg
+7,Limpeza de Superfícies,Shiny Pneu Pretinho Vonixx,Pretinho para pneus. Proporciona brilho e proteção.,39.9,,,shiny_pneu.jpg
+8,Limpeza de Superfícies,Restaurax Vonixx,Restaurador de plásticos internos e externos. Recupera a aparência original.,37.9,,,restaurax.jpg
+9,Limpeza de Superfícies,Glazy Vonixx,Limpador de vidros que limpa profundamente e reduz o atrito.,29.9,,,glazy.jpg
+10,Limpeza de Superfícies,Hidracouro Vonixx,"Condicionador para couro. Hidrata, protege e prolonga a vida do material.",39.9,,,hidracouro.jpg
