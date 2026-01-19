@@ -1,11 +1,18 @@
-id,categoria,produto,descricao,preco,link_mercado_livre,link_shopify,imagem
-1,Lavagem,Lava Auto Hydrox Wash Vonixx,"Shampoo automotivo neutro, fórmula segura para pintura, boa lubrificação e remoção de sujeira leve.",19.9,,,hydrox_wash.jpg
-2,Lavagem,Desincrustante Lava Autos V-Mol Vonixx,"Desincrustante automotivo concentrado. Remove sujeira pesada, óleo e detritos.",29.9,,,v_mol_desincrustante.jpg
-3,Lavagem,Limpador de Rodas e Motores Vexus Vonixx,Limpador para rodas e partes do motor. Ajuda a dissolver sujeira pesada e acumulada.,24.9,,,vexus.jpg
-4,Lavagem,V-Mol Vonixx,Shampoo automotivo concentrado com excelente rendimento e poder de limpeza.,36.0,,,v_mol_shampoo.jpg
-5,Proteção e Acabamento,Cera Blend Black Spray Vonixx,"Cera spray com carnaúba e sílica. Fácil aplicação, alto brilho e proteção leve da pintura.",49.9,,,blend_black_spray.jpg
-6,Limpeza de Superfícies,Prizm Vonixx,"Limpador ácido para remoção de sujeira ferrosa e decontaminação, como chuva ácida.",39.9,,,prizm.jpg
-7,Limpeza de Superfícies,Shiny Pneu Pretinho Vonixx,Pretinho para pneus. Proporciona brilho e proteção.,39.9,,,shiny_pneu.jpg
-8,Limpeza de Superfícies,Restaurax Vonixx,Restaurador de plásticos internos e externos. Recupera a aparência original.,37.9,,,restaurax.jpg
-9,Limpeza de Superfícies,Glazy Vonixx,Limpador de vidros que limpa profundamente e reduz o atrito.,29.9,,,glazy.jpg
-10,Limpeza de Superfícies,Hidracouro Vonixx,"Condicionador para couro. Hidrata, protege e prolonga a vida do material.",39.9,,,hidracouro.jpg
+produto,categoria,descricao,preco,imagem,link_mercado_livre,link_shopify
+Blend Black Spray,Proteção e Acabamento,"Revitalizador de plásticos que devolve a cor original com acabamento uniforme.",0,blend_black_spray.jpg,https://www.mercadolivre.com.br/,https://www.shopify.com/br
+Delet,Descontaminação,"Removedor de piche, cola e contaminantes difíceis sem agredir a superfície.",0,delet.jpg,https://www.mercadolivre.com.br/,https://www.shopify.com/br
+Glazy,Proteção e Brilho,"Selante spray que promove brilho intenso e proteção hidrorrepelente.",0,glazy.jpg,https://www.mercadolivre.com.br/,https://www.shopify.com/br
+Hidracouro,Interior,"Hidratante para couro que mantém a maciez e evita rachaduras.",49.90,hidracouro.jpg,https://www.mercadolivre.com.br/,https://www.shopify.com/br
+Hydrox Wash,Lavagem Shampoo,"Shampoo automotivo concentrado com alto poder de limpeza e brilho.",39.90,hydrox_wash.jpg,https://www.mercadolivre.com.br/,https://www.shopify.com/br
+Intense,Proteção de Pintura,"Cera líquida que intensifica a cor e protege a pintura.",34.90,intense.jpg,https://www.mercadolivre.com.br/,https://www.shopify.com/br
+Lizer,Limpeza Geral,"Produto indicado para limpeza eficiente de diversas superfícies internas e externas.",44.90,lzer.jpg,https://www.mercadolivre.com.br/,https://www.shopify.com/br
+Prizm,Proteção de Pintura,"Selante sintético com alta durabilidade e efeito vitrificado.",39.90,prizm.jpg,https://www.mercadolivre.com.br/,https://www.shopify.com/br
+Restaurax,Plásticos Externos,"Restaurador de plásticos externos com proteção UV.",49.90,restaurax.jpg,https://www.mercadolivre.com.br/,https://www.shopify.com/br
+Shiny Pneu,Pneus e Borrachas,"Finalizador de pneus com brilho intenso e duradouro.",59.90,shiny_pneu.jpg,https://www.mercadolivre.com.br/,https://www.shopify.com/br
+Sinergy Paint,Proteção de Pintura,"Proteção avançada para pintura com toque liso e brilho profundo.",119.90,sinergypaint.jpg,https://www.mercadolivre.com.br/,https://www.shopify.com/br
+Sinergy Wheel,Rodas,"Produto específico para limpeza e proteção de rodas.",89.90,sinergywhell.jpg,https://www.mercadolivre.com.br/,https://www.shopify.com/br
+Sintra,Limpeza Pesada,"Multilimpador concentrado indicado para sujeiras pesadas.",39.90,sintra.jpg,https://www.mercadolivre.com.br/,https://www.shopify.com/br
+Tok Final,Acabamento,"Finalizador para realce de brilho e proteção da superfície.",44.90,tokfinal.jpg,https://www.mercadolivre.com.br/,https://www.shopify.com/br
+V-Mol Shampoo,Lavagem Shampoo,"Shampoo neutro ideal para lavagens frequentes e manutenção.",75.90,v_mol_shampoo.jpg,https://www.mercadolivre.com.br/,https://www.shopify.com/br
+Vexus,Proteção de Pintura,"Cera híbrida de alta performance e longa durabilidade.",42.90,vexus.jpg,https://www.mercadolivre.com.br/,https://www.shopify.com/br
+V-Floc,Lavagem Shampoo,"Shampoo com espuma densa e alto rendimento.",19.90,vfloc.jpg,https://www.mercadolivre.com.br/,https://www.shopify.com/br

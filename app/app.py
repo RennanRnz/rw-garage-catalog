@@ -1,106 +1,173 @@
 import streamlit as st
 import pandas as pd
-from PIL import Image
 from pathlib import Path
 
-# =========================
-# CONFIGURAÇÃO DA PÁGINA
-# =========================
+# ========================
+# CONFIGURAÇÕES GERAIS
+# ========================
 st.set_page_config(
     page_title="RW Garage | Catálogo Automotivo",
-    page_icon="🚗",
+    page_icon="assets/icons/rw_garage_logo.png",
     layout="wide"
 )
 
-# =========================
-# CSS GLOBAL (CARDS)
-# =========================
-st.markdown("""
-<style>
-.card {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 14px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
-    margin-bottom: 25px;
-}
+BASE_DIR = Path(__file__).resolve().parent.parent
+DATA_DIR = BASE_DIR / "data"
+ASSETS_DIR = BASE_DIR / "assets"
+IMAGES_DIR = ASSETS_DIR / "produtos"
+ICONS_DIR = ASSETS_DIR / "icons"
 
-.preco {
-    font-size: 18px;
-    font-weight: bold;
-    color: #2e7d32;
-    margin-top: 8px;
-}
-</style>
-""", unsafe_allow_html=True)
-
-# =========================
-# TÍTULO
-# =========================
-st.title("🚗 RW Garage — Catálogo de Produtos Automotivos")
+# ========================
+# CSS CUSTOM
+# ========================
 st.markdown(
-    "Produtos selecionados para **estética automotiva**, com links diretos para compra."
+    """
+    <style>
+        .card {
+            background-color: #111;
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+            margin-bottom: 20px;
+        }
+        .price {
+            color: #25d366;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .btn {
+            display: inline-block;
+            padding: 8px 14px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-right: 6px;
+            color: white;
+        }
+        .btn-ml {
+            background-color: #ffe600;
+            color: black;
+        }
+        .btn-shop {
+            background-color: #5c6ac4;
+        }
+        .header {
+            padding: 30px;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            border-radius: 20px;
+            margin-bottom: 40px;
+        }
+        .wpp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 9999;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
 )
 
-# =========================
-# CARREGAMENTO DOS DADOS
-# =========================
-DATA_PATH = Path("data/catalogo_rw_garage.csv")
-IMG_PATH = Path("assets/produtos")
+# ========================
+# BOTÃO WHATSAPP FLUTUANTE
+# ========================
+st.markdown(
+    """
+    <div class="wpp-float">
+        <a href="https://wa.me/554396607482" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="55">
+        </a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
-df = pd.read_csv(DATA_PATH)
+# ========================
+# HEADER
+# ========================
+col_logo, col_title, col_links = st.columns([1, 6, 2])
 
-# Agrupando por categoria
-catalogo_por_categoria = {
-    categoria: dados.reset_index(drop=True)
-    for categoria, dados in df.groupby("categoria")
-}
+with col_logo:
+    st.image(str(ICONS_DIR / "rw_garage_logo.png"), width=90)
 
-# =========================
-# RENDERIZAÇÃO DO CATÁLOGO
-# =========================
-for categoria, produtos_categoria in catalogo_por_categoria.items():
+with col_title:
+    st.markdown(
+        """
+        <div class="header">
+            <h1>RW Garage</h1>
+            <h3>Catálogo Automotivo</h3>
+            <p>Produtos profissionais para estética automotiva</p>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
-    st.subheader(f"🧽 {categoria}")
+with col_links:
+    st.markdown(
+        """
+        <a href="https://www.instagram.com/rwgarage0/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" width="32">
+        </a>
+        """,
+        unsafe_allow_html=True
+    )
 
-    for _, produto in produtos_categoria.iterrows():
-        st.markdown('<div class="card">', unsafe_allow_html=True)
+# ========================
+# LOAD DATA
+# ========================
+df = pd.read_csv(DATA_DIR / "catalogo_rw_garage.csv")
 
-        col1, col2 = st.columns([1, 3])
+# ========================
+# FILTROS
+# ========================
+st.sidebar.header("🔍 Filtros")
 
-        # -------- IMAGEM --------
-        with col1:
-            img_file = IMG_PATH / produto["imagem"]
-            if img_file.exists():
-                image = Image.open(img_file)
-                st.image(image, width="stretch")
-            else:
-                st.info("Imagem não disponível")
+busca = st.sidebar.text_input("Buscar produto")
 
-        # -------- INFORMAÇÕES --------
-        with col2:
-            st.markdown(f"### {produto['produto']}")
-            st.write(produto["descricao"])
+categorias = ["Todas"] + sorted(df["categoria"].unique())
+categoria = st.sidebar.selectbox("Categoria", categorias)
 
-            st.markdown(
-                f'<div class="preco">💰 R$ {produto["preco"]:.2f}</div>',
-                unsafe_allow_html=True
-            )
+if busca:
+    df = df[df["produto"].str.contains(busca, case=False)]
 
-            col_btn1, col_btn2 = st.columns(2)
+if categoria != "Todas":
+    df = df[df["categoria"] == categoria]
 
-            with col_btn1:
-                if pd.notna(produto["link_mercado_livre"]):
-                    st.link_button(
-                        "🛒 Mercado Livre",
-                        produto["link_mercado_livre"]
-                    )
+# ========================
+# CATÁLOGO
+# ========================
+for categoria in df["categoria"].unique():
+    st.subheader(f"🧴 {categoria}")
+    produtos = df[df["categoria"] == categoria]
+    cols = st.columns(3)
 
-            with col_btn2:
-                if pd.notna(produto["link_shopify"]):
-                    st.link_button(
-                        "🛍️ Shopify",
-                        produto["link_shopify"]
-                    )
+    for i, (_, row) in enumerate(produtos.iterrows()):
+        with cols[i % 3]:
+            st.markdown("<div class='card'>", unsafe_allow_html=True)
 
-        st.markdown("</div>", unsafe_allow_html=True)
+            img = IMAGES_DIR / row["imagem"]
+            if img.exists():
+                st.image(str(img), width=200)
+
+            st.markdown(f"### {row['produto']}")
+            st.markdown(row["descricao"])
+
+            if row["preco"] > 0:
+                st.markdown(
+                    f"<div class='price'>💰 R$ {row['preco']:.2f}</div>",
+                    unsafe_allow_html=True
+                )
+
+            if pd.notna(row["link_mercado_livre"]):
+                st.markdown(
+                    f"<a class='btn btn-ml' href='{row['link_mercado_livre']}' target='_blank'>Mercado Livre</a>",
+                    unsafe_allow_html=True
+                )
+
+            if pd.notna(row["link_shopify"]):
+                st.markdown(
+                    f"<a class='btn btn-shop' href='{row['link_shopify']}' target='_blank'>Shopify</a>",
+                    unsafe_allow_html=True
+                )
+
+            st.markdown("</div>", unsafe_allow_html=True)
